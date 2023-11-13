@@ -2,16 +2,33 @@
 <html lang="en">
 <head>
     <title>Marquee</title>
+    <style>
+        .tag{
+            height: 200px;
+            width: 400px;
+            scroll-padding-top: -10px;
+            scroll-margin-block-end: 10px;
+            scroll-margin: 20px 20px;
+
+        }
+        .bg{
+            background-color: aqua;
+            width: 400px;
+        }
+
+    </style>
 </head>
 <body>
-    <marquee bgcolor="0EEAF7" direction="up" width="300" height="300" scrolldelay=200 >
-        <ul type="disc">
-            <li>Notofication 1</li>
-            <br>
-            <li>Notofication 2</li>
-            <br>
-            <li>Notofication 3</li>
-        </ul>
-    </marquee>
+    <div class="bg">
+        <marquee class="tag" direction="up" vspace="20%">
+            <ul type="disc">
+                <li>Notofication 1</li>
+                <br>
+                <li>Notofication 2</li>
+                <br>
+                <li>Notofication 3</li>
+            </ul>
+        </marquee>
+    </div>
 </body>
 </html>
