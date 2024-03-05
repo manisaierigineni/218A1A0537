@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>SHIPPING AND BILLING</title>
+    <script TYPE="TEXT/javascript">
+        function copying()
+        {
+            var copyStatus = document.getElementById('same');
+            if(copyStatus.checked)
+            {
+                document.address.b1.value = document.address.s1.value;
+                document.address.b2.value = document.address.s2.value;
+                document.address.b3.value = document.address.s3.value;
+                document.address.b4.value = document.address.s4.value;
+                document.address.b5.value = document.address.s5.value;
+            }
+            else
+            {
+                document.address.b1.value = '';
+                document.address.b2.value = '';
+                document.address.b3.value = '';
+                document.address.b4.value = '';
+                document.address.b5.value = '';
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1 align="center">ADDRESS</h1>
+    <form name="address">
+    <fieldset>
+        <legend>Shipping Information</legend>
+        <table>
+            <tr>
+                <td>Door/Flat No.</td>
+                <td><input type="text" name="s1"></td>
+            </tr>
+            <tr>
+                <td>Street</td>
+                <td><input type="text" name="s2"></td>
+            </tr>
+            <tr>
+                <td>City</td>
+                <td><input type="text" name="s3"></td>
+            </tr>
+            <tr>
+                <td>State</td>
+                <td><input type="text" name="s4"></td>
+            </tr>
+            <tr>
+                <td>Contact</td>
+                <td><input type="number" name="s5"></td>
+            </tr>    
+        </table>
+    </fieldset>
+    <input type="checkbox" id="same" onchange="copying()">&nbsp;&nbsp;Check if Billing Information is same as above.
+    <fieldset>
+        <legend>Shipping Information</legend>
+        <table>
+            <tr>
+                <td>Door/Flat No.</td>
+                <td><input type="text" name="b1"></td>
+            </tr>
+            <tr>
+                <td>Street</td>
+                <td><input type="text" name="b2"></td>
+            </tr>
+            <tr>
+                <td>City</td>
+                <td><input type="text" name="b3"></td>
+            </tr>
+            <tr>
+                <td>State</td>
+                <td><input type="text" name="b4"></td>
+            </tr>
+            <tr>
+                <td>Contact</td>
+                <td><input type="number" name="b5"></td>
+            </tr>    
+        </table>
+    </fieldset>
+</form>
+</body>
+</html>

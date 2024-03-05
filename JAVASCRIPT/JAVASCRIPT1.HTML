@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Shipping and Billing</title>
+<script type="text/javascript">
+function copying() {
+    var copyStatus = document.getElementById('same');
+    if(copyStatus.checked){
+        document.address.bdno.value = document.address.sdno.value;
+        document.address.bstreet.value = document.address.sstreet.value;
+        document.address.bcity.value = document.address.scity.value;
+        document.address.bstate.value = document.address.sstate.value;
+        document.address.bcontact.value = document.address.scontact.value;
+    }else{
+        document.address.bdno.value = '';
+        document.address.bstreet.value = '';
+        document.address.bcity.value = '';
+        document.address.bstate.value = '';
+        document.address.bcontact.value = '';
+    }
+}
+</script>
+</head>
+<body>
+<h1 align="center">Address Details</h1>
+<form name="address">
+<fieldset>
+<legend>Shipping Information</legend>
+<table>
+<tr>
+<td><label>Door/Flat No.</label></td>
+<td><input type="text" name="sdno"></td>
+</tr>
+<tr>
+<td><label>Street</label></td>
+<td><input type="text" name="sstreet"></td>
+</tr>
+<tr>
+<td><label>City</label></td>
+<td><input type="text" name="scity"></td>
+</tr>
+<tr>
+<td><label>State</label></td>
+<td><input type="text" name="sstate"></td>
+</tr>
+<tr>
+<td><label>Contact</label></td>
+<td><input type="number" name="scontact"></td>
+</tr>
+</table>
+</fieldset>
+<br>
+<input type="checkbox" id="same" onchange="copying()">&nbsp;&nbsp;Check if Billing Information is same as above.
+<br><br>
+<fieldset>
+<legend>Billing Information</legend>
+<table>
+<tr>
+<td><label>Door/Flat No.</label></td>
+<td><input type="text" name="bdno"></td>
+</tr>
+<tr>
+<td><label>Street</label></td>
+<td><input type="text" name="bstreet"></td>
+</tr>
+<tr>
+<td><label>City</label></td>
+<td><input type="text" name="bcity"></td>
+</tr>
+<tr>
+<td><label>State</label></td>
+<td><input type="text" name="bstate"></td>
+</tr>
+<tr>
+<td><label>Contact</label></td>
+<td><input type="number" name="bcontact"></td>
+</tr>
+</table>
+</fieldset>
+</form>
+</body>
+</html>
